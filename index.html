@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 50 Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project 50 Challenge<br><span class="subtitle">Change Your Life</span></h1>
+            <a href="https://the50day.framer.website/welcome-en" class="info-link" target="_blank">What is Project 50 Challenge? →</a>
+            <p class="date" id="currentDate"></p>
+        </header>
+        
+        <main>
+            <div class="habits-list">
+                <div class="habit-card" data-id="1">
+                    <div class="habit-icon">⏰</div>
+                    <div class="habit-content">
+                        <h3>Wake Up at 8 AM</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="habit-card" data-id="2">
+                    <div class="habit-icon">🎯</div>
+                    <div class="habit-content">
+                        <h3>Morning Focus (1h)</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="habit-card" data-id="3">
+                    <div class="habit-icon">💪</div>
+                    <div class="habit-content">
+                        <h3>Exercise (1h)</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="habit-card" data-id="4">
+                    <div class="habit-icon">📚</div>
+                    <div class="habit-content">
+                        <h3>Read 10 Pages</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="habit-card" data-id="5">
+                    <div class="habit-icon">📝</div>
+                    <div class="habit-content">
+                        <h3>Study (1h)</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="habit-card" data-id="6">
+                    <div class="habit-icon">🥗</div>
+                    <div class="habit-content">
+                        <h3>Healthy Diet</h3>
+                    </div>
+                    <button class="habit-check" aria-label="Check">✓</button>
+                </div>
+
+                <div class="reflection-card" data-id="7" onclick="window.location.href='detail.html?id=7'">
+                    <div class="habit-icon">✍️</div>
+                    <div class="reflection-content">
+                        <h3>Today's Reflection</h3>
+                        <textarea id="dailyReflection" placeholder="Write your thoughts..." onclick="event.stopPropagation()"></textarea>
+                        <button id="saveReflection" onclick="event.stopPropagation()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

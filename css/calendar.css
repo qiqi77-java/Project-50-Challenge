@@ -1,0 +1,147 @@
+/* 详情页特有样式 */
+.back-button {
+    position: absolute;
+    left: var(--spacing);
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.habit-description {
+    color: var(--text-secondary);
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+/* 统计卡片样式 */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* 日历容器样式 */
+.calendar-container {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.calendar-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* 日历网格样式 */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    padding: 16px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 8px;
+}
+
+.calendar-header span {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 8px 0;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.calendar-day.completed {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.calendar-day.today {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.calendar-day.future {
+    background-color: var(--background-color);
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+/* 激励卡片样式 */
+.motivation-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.motivation-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.motivation-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .calendar {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-card:last-child {
+        grid-column: span 2;
+    }
+} 
